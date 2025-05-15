@@ -1,15 +1,30 @@
 plugins {
-    kotlin("jvm") version "1.9.21"
+    kotlin("jvm") version "2.1.21"
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 subprojects {
+
     apply {
         plugin("kotlin")
         plugin("com.github.johnrengelman.shadow")
     }
     repositories {
-        maven("https://nexus.cyanbukkit.cn/repository/maven-public")
+        maven("https://maven.elmakers.com/repository")
+        maven("https://libraries.minecraft.net")
+
+        maven("https://nexus.cyanbukkit.cn/repository/maven-public/") {
+             //加载失败跳过这个站点
+            content {
+                excludeGroup("com.mojang") //排除spigot
+            }
+        }
+        maven("https://lanternmc.coding.net/public-artifacts/cyanbukkit/public/packages/"){
+            //加载失败跳过这个站点
+            content {
+                excludeGroup("com.mojang") //排除spigot
+            }
+        }
     }
 
     dependencies {

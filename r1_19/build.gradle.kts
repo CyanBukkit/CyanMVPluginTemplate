@@ -1,18 +1,10 @@
-//plugins {
-//    kotlin("jvm") version "1.8.21"
-//}
-
-repositories {
-    maven("https://nexus.cyanbukkit.cn/repository/maven-public")
-}
-
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT")
-    // Papi
+    compileOnly("org.spigotmc:spigot:1.19-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:minecraft-server:1.19-R0.1-SNAPSHOT")
     compileOnly(kotlin("stdlib-jdk8"))
+    implementation(project(":interface"))
 }
-
-
 
 kotlin {
     jvmToolchain(17)
