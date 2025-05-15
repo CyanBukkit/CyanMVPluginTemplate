@@ -12,7 +12,6 @@ subprojects {
     repositories {
         maven("https://maven.elmakers.com/repository")
         maven("https://libraries.minecraft.net")
-
         maven("https://nexus.cyanbukkit.cn/repository/maven-public/") {
              //加载失败跳过这个站点
             content {
@@ -20,7 +19,7 @@ subprojects {
             }
         }
         maven("https://lanternmc.coding.net/public-artifacts/cyanbukkit/public/packages/"){
-            //加载失败跳过这个站点
+            //1.20.1之后的nms都是
             content {
                 excludeGroup("com.mojang") //排除spigot
             }
