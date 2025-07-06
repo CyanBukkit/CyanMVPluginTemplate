@@ -18,12 +18,6 @@ subprojects {
                 excludeGroup("com.mojang") //排除spigot
             }
         }
-        maven("https://lanternmc.coding.net/public-artifacts/cyanbukkit/public/packages/"){
-            //1.20.1之后的nms都是
-            content {
-                excludeGroup("com.mojang") //排除spigot
-            }
-        }
     }
 
     dependencies {
