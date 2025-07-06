@@ -1,6 +1,5 @@
 pluginManagement {
     repositories {
-        maven("https://nexus.cyanbukkit.cn/repository/maven-public/")
         gradlePluginPortal()
         mavenCentral()
     }
